@@ -1,10 +1,40 @@
-; given a page url, extract :
-; phone
-; ...
+CoordMode, Mouse, Screen
 
-goToUrl("https://www.leboncoin.fr/ventes_immobilieres/2271109727.htm")
-scrapePage()
+; find a way to 
+; readTxt(filename) -> vector/list of all urls
+; 
+; spit page-data in excel modifying it
+; addRow(excelFilename, row)
+; row = vector/list of the page-data
+; pageDataToRow(pageData)
+; 
+; read urls
+; 	scrape page
+; 	add to excel
+; 	scrape page
+; 	add to excel
+; 	etc...
+; finished
 
+^t::main()
+	
+
+main() {
+	; read urls.txt
+	; first url
+	goToUrl("https://www.leboncoin.fr/ventes_immobilieres/2271109727.htm")
+	pageData := scrapePage()
+	; savePageData(pageData)
+	; loop
+	showFinished()
+}
+
+savePageData() {
+	; save page data into scraped-data.xlsx which already exists
+	; number  title  company  siret  url
+	; 
+	; modify excel file lib
+}
 
 scrapePage() {
 	pageData := {}
@@ -52,7 +82,7 @@ scrapePage() {
 	sleep 1000
 
 	; select company
-	MouseClickDrag left, 1065, 280, 1310, 320
+	MouseClickDrag left, 1067, 278, 1313, 279
 	sleep 1000
 
 	; store company
@@ -90,3 +120,21 @@ goToUrl(url) {
 	sleep 5000
 }
 
+showFinished() {
+	MouseMove 62, 112
+}
+
+paste(text) {
+  clipboard = %text%
+  sleep 500
+  send ^v
+  sleep 500
+  return
+}
+
+copy() {
+	send ^c
+	return
+}
+
+ESC::ExitApp

@@ -16,3 +16,5 @@ pom.xml.asc
 /03000_files
 /04000_files
 /05000_files
+
+.scraped-data.xlsx

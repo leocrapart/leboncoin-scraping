@@ -1,7 +1,7 @@
 CoordMode, Mouse, Screen
 #Include tf.ahk
-; find a way to 
-; readTxt(filename) -> vector/list of all urls
+; vfind a way to 
+; vreadTxt(filename) -> vector/list of all urls
 ; 
 ; spit page-data in excel modifying it
 ; addRow(excelFilename, row)
@@ -18,6 +18,11 @@ CoordMode, Mouse, Screen
 
 ^t::main()
 ^y::msgbox % url(2)
+
+
+updateRow(excelFilename, n, newRow) {
+	; opens excelFilename and replace row n by newRow vector
+}
 
 url(n) {
 	txtFilename := "C:\Users\leocr\Desktop\leboncoin-scraping\urls.txt"

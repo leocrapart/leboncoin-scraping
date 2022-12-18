@@ -17,6 +17,20 @@ CoordMode, Mouse, Screen
 ; finished
 
 ^t::main()
+^y::urls()
+
+urls() {
+	urls := readTxt("C:\Users\leocr\Desktop\leboncoin-scraping\urls.txt")
+	msgbox % urls
+	msgbox % urls[1]
+	msgbox % urls[10]
+	return urls
+}
+
+readTxt(filename) {
+	FileRead output, % filename
+	return output
+}
 	
 
 main() {
@@ -28,6 +42,7 @@ main() {
 	; loop
 	showFinished()
 }
+
 
 savePageData() {
 	; save page data into scraped-data.xlsx which already exists

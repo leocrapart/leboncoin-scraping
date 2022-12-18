@@ -1,5 +1,5 @@
 CoordMode, Mouse, Screen
-
+#Include tf.ahk
 ; find a way to 
 ; readTxt(filename) -> vector/list of all urls
 ; 
@@ -17,19 +17,16 @@ CoordMode, Mouse, Screen
 ; finished
 
 ^t::main()
-^y::urls()
+^y::msgbox % url(2)
 
-urls() {
-	urls := readTxt("C:\Users\leocr\Desktop\leboncoin-scraping\urls.txt")
-	msgbox % urls
-	msgbox % urls[1]
-	msgbox % urls[10]
-	return urls
+url(n) {
+	txtFilename := "C:\Users\leocr\Desktop\leboncoin-scraping\urls.txt"
+	url := TF_ReadLines(txtFilename, n, n)
+	return url
 }
 
-readTxt(filename) {
-	FileRead output, % filename
-	return output
+urls() {
+	return TF_ReadLines("C:\Users\leocr\Desktop\leboncoin-scraping\urls.txt")
 }
 	
 

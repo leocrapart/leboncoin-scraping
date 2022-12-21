@@ -20,7 +20,9 @@ CoordMode, Mouse, Screen
 ^y::msgbox % url(2)
 
 
-updateRow(excelFilename, n, newRow) {
+updateRow(n, newRow) {
+	filename := "data.xlsx"
+	newRow := ["macron", "76M"]
 	; opens excelFilename and replace row n by newRow vector
 }
 

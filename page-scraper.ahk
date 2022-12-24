@@ -131,6 +131,15 @@ scrapePage() {
 	return pageData
 }
 
+; plan for faster scraping :
+; parrallel scraping : opening 2 browsers, spliting screen in it
+; reducing sleeping times
+; good internet connection to wait less for loading pages
+; (op) finding a way to scrape without needing a screen and mouse
+
+
+;---- helpers ----
+
 goToUrl(url) {
 	; click urlbar
 	click 580, 50
@@ -142,6 +151,7 @@ goToUrl(url) {
 showFinished() {
 	MouseMove 62, 112
 }
+
 
 paste(text) {
   clipboard = %text%

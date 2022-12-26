@@ -1,20 +1,5 @@
 CoordMode, Mouse, Screen
 #Include tf.ahk
-; vfind a way to 
-; vreadTxt(filename) -> vector/list of all urls
-; 
-; spit page-data in excel modifying it
-; addRow(excelFilename, row)
-; row = vector/list of the page-data
-; pageDataToRow(pageData)
-; 
-; read urls
-; 	scrape page
-; 	add to excel
-; 	scrape page
-; 	add to excel
-; 	etc...
-; finished
 
 ^t::main()
 ^y::msgbox % url(2)
@@ -130,12 +115,6 @@ scrapePage() {
 	msgbox % siret
 	return pageData
 }
-
-; plan for faster scraping :
-; parrallel scraping : opening 2 browsers, spliting screen in it
-; reducing sleeping times
-; good internet connection to wait less for loading pages
-; (op) finding a way to scrape without needing a screen and mouse
 
 
 ;---- helpers ----

@@ -6,6 +6,13 @@
   [& args]
   (println "Hello, World!"))
 
+;; the clojure code use is :
+;; - extract urls from the result pages
+;; - and put urls into a text/excel/local db
+
+;; which will then be used by the ahk code
+;; - to extract data from those leboncoin pages
+;; - and put this data into an excel file
 
 (defn between [str regstart regend]
   (let [thing-and-more (second

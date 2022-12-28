@@ -21,6 +21,20 @@
     (first (clojure.string/split thing-and-more regend))
     nil)))
 
+(defn first-of-split [str regex]
+  (first
+    (clojure.string/split str regex)))
+
+(defn second-of-split [str regex]
+  (second
+    (clojure.string/split str regex)))
+
+(defn between-2 [str regstart regend]
+  (let [thing-and-more (second-of-split str regstart)]
+    (if thing-and-more
+      (first-of-split thing-and-more regend)
+      nil)))
+
 (defn extract-thing [regend str]
   (first (clojure.string/split str regend)))
 

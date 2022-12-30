@@ -65,14 +65,6 @@
     #"class=\"sc-BngTV cODRLH\" href=\"" #"\"><"))
 
 
-; (urls "03000.html")
-; (first (urls "03000.html"))
-; (first (urls "04000.html"))
-; (first (urls "05000.html"))
-; (second (urls "03000.html"))
-; (second (urls "04000.html"))
-; (second (urls "05000.html"))
-
 ; (flatten 
 ;   (conj (urls "03000.html") 
 ;         (urls "04000.html") 

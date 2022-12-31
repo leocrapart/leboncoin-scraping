@@ -14,13 +14,6 @@
 ;; - to extract data from those leboncoin pages
 ;; - and put this data into an excel file
 
-; (defn between [str regstart regend]
-;   (let [thing-and-more (second
-;                           (clojure.string/split str regstart))]
-;   (if thing-and-more
-;     (first (clojure.string/split thing-and-more regend))
-;     nil)))
-
 (defn first-of-split [str regex]
   (first
     (clojure.string/split str regex)))
